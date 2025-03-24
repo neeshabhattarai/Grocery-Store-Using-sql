@@ -13,5 +13,7 @@ jobs:
           run: echo "code runned"
         - name: checkout version
           uses: actions/checkout@v3
+        - name: Checks dependicies
+          run: npm ci
     
 
