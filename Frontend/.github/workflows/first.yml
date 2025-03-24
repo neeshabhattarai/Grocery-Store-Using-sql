@@ -11,5 +11,7 @@ jobs:
      steps:
         - name: Run the code
           run: echo "code runned"
+        - name: checkout version
+          uses: actions/checkout@v3
     
 
