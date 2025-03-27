@@ -15,6 +15,7 @@ margin-right:20px ;
 export const StyledDrawer=styled.div<{open:boolean}>`
 height: 25px;
 width: 30px;
+transition: background-color 1s ease-out;
 background-color: ${({open})=>open?"":"#e6e3e1"};
 `;
 export default Image;

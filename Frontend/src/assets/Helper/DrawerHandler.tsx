@@ -1,11 +1,12 @@
-import { useRef, useState } from "react";
+import {  useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import Drawer from "./Drawer";
 import LinkHandler from "./LinkHandler";
 import styled from "styled-components";
 import ProfileHandler from "./ProfileHandler";
 import { StyledDrawer } from "../Style/CircularImage";
-import MouseListener from "./ClickDetecter";
+
+
 const Profiler=styled.div`
 display: flex;
 flex-direction: row;
@@ -33,14 +34,16 @@ const DrawerHandler=()=>{
     setOpen((c)=>!c);
    }
     return(<Profiler>
+    
         <Drawer open={open}  close={Close} > 
        <StyledDrawer open={open}>
         <FiAlignJustify size={"1.5rem"} onClick={Toggle}/>
         </StyledDrawer>
    
-       {open && <LinkHandler/>}
+       {open && <LinkHandler />}
        
         </Drawer>
+     
     
         <ProfileHandler/>
         </Profiler>

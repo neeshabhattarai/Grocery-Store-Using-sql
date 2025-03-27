@@ -7,7 +7,7 @@ font-size: 1.3rem;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-
+transition: color 3s ease-out;
 gap:1.5rem;
 align-items: center;
 a.active{
@@ -15,14 +15,18 @@ a.active{
  -webkit-background-clip: text;
  color:transparent;
 }
+
+
+
 @media (min-width: 40rem) {
     flex-direction: row;
-
+    animation: none;
     gap:2rem;
 }
 `;
 const Links=styled.a`
 color: black;
+transition: color 1s ease-in-out;
 &:hover, .active{
  background-image:var(--Hover);
  -webkit-background-clip: text;
@@ -36,7 +40,7 @@ color: black;
 
 
 const LinkHandler=()=>{
-    return(<NavRecorder>
+    return(<NavRecorder >
     <Links as={NavLink} to={'home'} >Home</Links>
     <Links as={NavLink} to={'contact'}  >About</Links>
     <Links as={NavLink} to={'*'}  >About</Links>
